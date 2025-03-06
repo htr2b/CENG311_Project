@@ -58,7 +58,8 @@ This website was developed for the AYBU Cyber Club a cybersecurity club founded 
 
 ## Contributors
 
-- **AYBU Cyber Club**: The content provider and inspiration behind the website.
+- **Onur Kahan**
+- **Cemilhan Sağlam**
 - **Google Fonts (Michroma)**: For typography.
 - **Boxicons**: For the icons used across the site.
 
