@@ -2,7 +2,7 @@
 
 **Project Overview:**  
 This website was developed for the AYBU Cyber Club a cybersecurity club founded by the students of Ankara Yıldırım Beyazıt University. It provides comprehensive information about the club, including its mission, upcoming events, community, and blog updates.
-
+Preview of the project: https://htr2b.github.io/CENG311_Project/index.html
 ---
 
 ## Table of Contents
