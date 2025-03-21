@@ -67,4 +67,4 @@ This website was developed for the AYBU Cyber Club a cybersecurity club founded 
 
 ## License
 
-This project was developed for academic purposes as part of the CENG311 course. (Add license details here if applicable.)
+This project was developed for academic purposes as part of the CENG311 course.
