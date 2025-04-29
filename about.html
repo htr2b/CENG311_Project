@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <title>About - AYBU Cyber</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="assets/icon.png">
 </head>
 
@@ -35,35 +36,42 @@
         </nav>
     </header>
     <section class="main" id="about">
-
-        <h1>About Us</h1>
-        <p>
-            AYBU Cyber is a cybersecurity club founded by the students of Ankara Yıldırım Beyazıt University. We are
-            dedicated
-            to creating a supportive environment where future professionals can collaborate, develop practical skills,
-            and stay
-            informed about the latest trends in cyber defense.
-        </p>
-
-        <h1>Vision</h1>
-        <p>
-            Our vision is to raise awareness among university students about ethical hacking, cybersecurity research,
-            and digital
-            security. By equipping them with cutting-edge knowledge and a responsible approach to technology, we aim to
-            help
-            them navigate today’s interconnected world more confidently and ethically.
-        </p>
-
-        <h1>Mission</h1>
-        <p>
-            We fulfill our mission by organizing weekly cybersecurity news briefings, publishing in-depth technical
-            articles,
-            and hosting CTF (Capture the Flag) competitions. Through these activities, we ensure that our members gain
-            hands-on experience, sharpen their problem-solving abilities, and build a strong foundation for their future
-            roles
-            in the ever-evolving cybersecurity landscape.
-        </p>
-    </section>
+        <div class="tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="tab-about">About Us</button>
+            <button class="tab-btn"       data-tab="tab-vision">Vision</button>
+            <button class="tab-btn"       data-tab="tab-mission">Mission</button>
+          </div>
+          <div class="tab-contents">
+            <div id="tab-about" class="tab-content active">
+              <h1>About Us</h1>
+              <p>
+                AYBU Cyber is a cybersecurity club founded by the students of Ankara Yıldırım Beyazıt University. We are
+                dedicated to creating a supportive environment where future professionals can collaborate, develop practical skills,
+                and stay informed about the latest trends in cyber defense.
+              </p>
+            </div>
+            <div id="tab-vision" class="tab-content">
+              <h1>Vision</h1>
+              <p>
+                Our vision is to raise awareness among university students about ethical hacking, cybersecurity research,
+                and digital security. By equipping them with cutting-edge knowledge and a responsible approach to technology, we aim to
+                help them navigate today’s interconnected world more confidently and ethically.
+              </p>
+            </div>
+            <div id="tab-mission" class="tab-content">
+              <h1>Mission</h1>
+              <p>
+                We fulfill our mission by organizing weekly cybersecurity news briefings, publishing in-depth technical articles,
+                and hosting CTF (Capture the Flag) competitions. Through these activities, we ensure that our members gain
+                hands-on experience, sharpen their problem-solving abilities, and build a strong foundation for their future roles
+                in the ever-evolving cybersecurity landscape.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
     <footer>
         <div class="footer">
             <a href="https://chat.whatsapp.com/BuzjXSVnDiPGb933z74XSX" target="_blank" aria-label="WhatsApp">

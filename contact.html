@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <title>Contact - AYBU Cyber</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <link rel="icon" type="image/png" href="assets/icon.png">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -25,15 +29,19 @@
     <section class="main">
         <h1>Contact Us</h1>
         <div class="contact-options">
-            <form class="contact-form" action="mailto:someone@example.com" method="post" enctype="text/plain">
+            <form id="contactForm" class="contact-form" action="#" method="post" >
                 <label for="name">Your Name</label>
-                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="text" name="name" id="name" placeholder="Your Name" title="Please enter your full name." required>
+
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" title="Please enter a valid email address." required>
+
                 <label for="message">Your Message</label>
-                <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+                <textarea name="message" id="message" rows="5" placeholder="Your Message" title="Write your message here." required></textarea>
+
                 <button type="submit" class="btn">Send</button>
             </form>
+
             <div class="side-button">
                 <p>Or you can fill a form without giving your name for any feedback.</p>
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSey3O2XsxjsWGFLVQSM643B3NPlDg9d-nwsfjCSdhtp-wyl5w/viewform?usp=dialog"
@@ -41,6 +49,18 @@
             </div>
         </div>
     </section>
+
+    <div id="loadingOverlay" class="overlay hidden">
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+    
+      <div id="successDialog" class="dialog hidden">
+        <p>Your message has been sent successfully! 🎉</p>
+        <button id="closeDialog" class="btn">Close</button>
+      </div>
+
     <footer>
         <div class="footer">
             <a href="https://chat.whatsapp.com/BuzjXSVnDiPGb933z74XSX" target="_blank" aria-label="WhatsApp"><i

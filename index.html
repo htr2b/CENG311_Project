@@ -5,10 +5,13 @@
     <meta charset="UTF-8" />
     <title>AYBU Cyber</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="assets/icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
+    <div id="splash-screen"></div>
     <header>
         <div class="logo">AYBU CYBER</div>
         <nav>
@@ -36,6 +39,25 @@
     </header>
     <section class="main">
         <h1>AYBU Cyber Club</h1>
+
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">
+                    <img src="assets/cemoinThehouse.jpg" alt="Slide 1">
+                </div>
+                <div class="slide">
+                    <img src="assets/htr2b.gif" alt="Slide 2">
+                </div>
+                <div class="slide">
+                    <img src="assets/icon.png" alt="Slide 3">
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </div>
+
         <p>Welcome to the world of cybersecurity! Attend our events, read our blog posts.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnCrxnW-CZ9btjnLHYRfqTiyjKsENuyuEmOBZDcXd9aQ0xeA/viewform?usp=sharing"
             target="_blank" class="btn">Join Us</a>
@@ -63,8 +85,7 @@
             <a href="https://chat.whatsapp.com/BuzjXSVnDiPGb933z74XSX" target="_blank" aria-label="WhatsApp">
                 <i class='bx bxl-whatsapp'></i>
             </a>
-            <a href="https://www.linkedin.com/company/aybu-cyber/"
-                target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/aybu-cyber/" target="_blank" aria-label="LinkedIn">
                 <i class='bx bxl-linkedin-square'></i>
             </a>
             <a href="https://instagram.com/aybucyber" target="_blank" aria-label="Instagram">
@@ -75,6 +96,7 @@
             </a>
         </div>
     </footer>
+
 </body>
 
 </html>
