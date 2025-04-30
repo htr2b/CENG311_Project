@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         $("#splash-screen").fadeOut(1000, function () {
             $(this).remove();
         });
-    }, 1000);
+    }, 500);
 });
   const slidesEl = document.querySelector('.slides');
   if (slidesEl) {

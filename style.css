@@ -242,10 +242,18 @@ footer {
 
 .slider {
   width: 100%;
+  height: 450px;
   max-width: 800px;
   position: relative;
   margin: 20px auto;
   overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .slides {
@@ -416,4 +424,51 @@ footer {
   height: 100%;
   z-index: 9999;
   background: black;
+}
+
+.lb-outerContainer {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 400px !important;
+  height: 400px !important;
+  margin-top: -200px !important;
+  margin-left: -200px !important;
+}
+
+.lb-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.lb-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: contain;
+}
+
+.lb-dataContainer {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 400px !important;
+  margin-left: -200px !important;
+  margin-top: 200px !important;
+  background: transparent !important;
+  text-align: center !important;
+  padding: 0.5em 0 !important;
+}
+
+.lb-caption {
+  display: block !important;
+  margin: 0.2em 0 !important;
+  color: #fff !important;
+  font-size: 1rem !important;
+  line-height: 1.4 !important;
+}
+
+.lb-number {
+  display: none !important;
 }
