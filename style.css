@@ -472,3 +472,51 @@ footer {
 .lb-number {
   display: none !important;
 }
+
+#sec-news {
+  background: #00000000;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#sec-news h2 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  color: #00ffff;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+#news-list {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+#news-list li {
+  background: #00000000;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#news-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#news-list a {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: 500;
+}
+
+#news-list a:hover {
+  text-decoration: underline;
+}
