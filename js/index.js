@@ -10,32 +10,29 @@ async function loadAdvice() {
 }
 document.addEventListener('DOMContentLoaded', loadAdvice);
 
-async function loadSecNewsWithoutKey() {
-  const rssUrl = encodeURIComponent('https://feeds.feedburner.com/TheHackersNews');
-  const proxy = 'https://api.allorigins.win/get?url=';
-
-  try {
-    const res = await fetch(proxy + rssUrl);
-    if (!res.ok) throw new Error(`Proxy hatası: HTTP ${res.status}`);
-    const { contents } = await res.json();
-
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(contents, 'application/xml');
-    const items = Array.from(xml.querySelectorAll('item')).slice(0, 5);
-
-    const list = document.getElementById('news-list');
-    list.innerHTML = items.map(item => {
-      const title = item.querySelector('title').textContent;
-      const link = item.querySelector('link').textContent;
-      return `<li><a href="${link}" target="_blank" rel="noopener">${title}</a></li>`;
-    }).join('');
-  } catch (err) {
-    console.error('RSS haber yükleme hatası:', err);
-    document.getElementById('news-list').innerHTML =
-      `<li>Haberler alınamadı: ${err.message}</li>`;
+function handleRssData(data) {
+  const list = document.getElementById('news-list');
+  if (!data.items) {
+    list.innerHTML = '<li>Haberler alınamadı.</li>';
+    return;
   }
+  list.innerHTML = data.items.slice(0, 5).map(item =>
+    `<li><a href="${item.link}" target="_blank" rel="noopener">${item.title}</a></li>`
+  ).join('');
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  loadSecNewsWithoutKey();
-});
+function loadSecNewsJSONP() {
+  const rssUrl = encodeURIComponent('https://feeds.feedburner.com/TheHackersNews');
+  const callbackName = 'handleRssData';
+  const script = document.createElement('script');
+  script.src =
+    `https://api.rss2json.com/v1/api.json?` +
+    `rss_url=${rssUrl}&callback=${callbackName}`;
+  script.onerror = () => {
+    document.getElementById('news-list').innerHTML =
+      '<li>Haberler yüklenemedi (JSONP hatası).</li>';
+  };
+  document.body.appendChild(script);
+}
+
+document.addEventListener('DOMContentLoaded', loadSecNewsJSONP);
