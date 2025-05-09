@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', loadAdvice);
 function handleRssData(data) {
   const list = document.getElementById('news-list');
   if (!data.items) {
-    list.innerHTML = '<li>Haberler alınamadı.</li>';
+    list.innerHTML = '<li>News could not be received.</li>';
     return;
   }
   list.innerHTML = data.items.slice(0, 5).map(item =>
@@ -30,7 +30,7 @@ function loadSecNewsJSONP() {
     `rss_url=${rssUrl}&callback=${callbackName}`;
   script.onerror = () => {
     document.getElementById('news-list').innerHTML =
-      '<li>Haberler yüklenemedi (JSONP hatası).</li>';
+      '<li>News could not be loaded.</li>';
   };
   document.body.appendChild(script);
 }

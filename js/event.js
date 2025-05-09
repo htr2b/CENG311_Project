@@ -12,7 +12,7 @@ async function loadEvents() {
         </div>
       `).join('');
     } catch (err) {
-      console.error('Etkinlik yüklenirken hata:', err);
+      console.error('Error loading event:', err);
     }
   }
 document.addEventListener('DOMContentLoaded', loadEvents);

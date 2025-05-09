@@ -33,8 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn= document.getElementById('closeDialog');
 
   if (form && overlay && progress && dialog && closeBtn) {
-    form.setAttribute('novalidate', '');
-    form.addEventListener('invalid', e => e.preventDefault(), true);
+
     form.addEventListener('submit', e => {
       e.preventDefault();
       if (!form.checkValidity()) return;
